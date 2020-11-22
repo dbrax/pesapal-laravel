@@ -9,7 +9,7 @@ use Epmnzava\Pesapal\OAuth\OAuthSignatureMethod_HMAC_SHA1;
  * written: Emmanuel Paul Mnzava
  * Twitter: @epmnzava
  * Email: epmnzava@gmail.com
- * Formal class for pesapal intergration
+ * Formal class for pesapal intergration 22/11/2020
  */
 class Pesapal
 {
