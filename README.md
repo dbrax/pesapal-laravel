@@ -1,14 +1,15 @@
 # Pesapal - Laravel Quick Package
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/epmnzava/pesapal.svg?style=flat-square)](https://packagist.org/packages/epmnzava/pesapal)
+[![Build Status](https://img.shields.io/travis/epmnzava/pesapal/master.svg?style=flat-square)](https://travis-ci.org/epmnzava/pesapal)
 [![Total Downloads](https://img.shields.io/packagist/dt/epmnzava/pesapal.svg?style=flat-square)](https://packagist.org/packages/epmnzava/pesapal)
 [![Emmanuel Mnzava](https://img.shields.io/badge/Author-Emmanuel%20Mnzava-green)](mailto:epmnzava@gmail.com)
 
 
 This is a laravel package for intergrating with - [pesapal service] (https://developer.pesapal.com/)
 ## Installation
-- Laravel Version: 8.*
-- PHP Version: 7.2
+- Laravel Version: ˆ7.*
+- PHP Version: ˆ7.2
 
 You can install the package via composer:
 
