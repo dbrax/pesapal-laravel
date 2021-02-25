@@ -1,37 +1,100 @@
-## Welcome to GitHub Pages
+# Pesapal - Laravel Quick Package
 
-You can use the [editor on GitHub](https://github.com/dbrax/pesapal-laravel/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/epmnzava/pesapal.svg?style=flat-square)](https://packagist.org/packages/epmnzava/pesapal)
+[![Build Status](https://img.shields.io/travis/epmnzava/pesapal/master.svg?style=flat-square)](https://travis-ci.org/epmnzava/pesapal)
+[![Total Downloads](https://img.shields.io/packagist/dt/epmnzava/pesapal.svg?style=flat-square)](https://packagist.org/packages/epmnzava/pesapal)
+[![Emmanuel Mnzava](https://img.shields.io/badge/Author-Emmanuel%20Mnzava-green)](mailto:epmnzava@gmail.com)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+This is a laravel package for intergrating with - [pesapal service] (https://developer.pesapal.com/)
+## Installation
+- Laravel Version: ˆ7.*
+- PHP Version: ˆ7.2
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+You can install the package via composer:
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+composer require epmnzava/pesapal
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+# Update your config (for Laravel 5.4 and below)
+Add the service provider to the providers array in config/app.php:
+```
+Epmnzava\Pesapal\PesapalServiceProvider::class
+```
+Add the facade to the aliases array in config/app.php:
+```
+'Pesapal'=>Epmnzava\Pesapal\PesapalFacade::class,
+```
 
-### Jekyll Themes
+# Publish the package configuration (for Laravel 5.4 and below)
+Publish the configuration file and migrations by running the provided console command:
+```
+php artisan vendor:publish --provider="Epmnzava\Pesapal\PesapalServiceProvider"
+```
+### Environmental Variables
+PESAPAL_CONSUMER_KEY ` your provided pesapal consumer key  `<br/>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dbrax/pesapal-laravel/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+PESAPAL_CONSUMER_SECRET ` your provided pesapal client secret `<br/>
 
-### Support or Contact
+PESAPAL_API_URL ` your provided pesapal api url live: www.pesapal.com Test demo.pesapal.com  `<br/>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+PESAPAL_CALLBACK_URL    ` your  callback url `<br/>
+
+CURRENCY_CODE ` currency put TZS for Tanzanian Shillings `<br/>
+
+
+## Usage
+This release does not come with database tables for transaction or payments you need to create then  After you have filled all necessary variables , providers and facases this is how the package can be used.
+
+``` php
+<?php
+
+namespace App\Http\Controllers;
+
+use Pesapal;
+
+use Illuminate\Http\Request;
+class TransactionController extends Controller
+{
+//
+
+    public function customer_transaction(){
+
+        
+        //Pesapal::make_payment("customerfirstname","customerlastname","customerlastname","amount","transaction_id");
+      $res=Pesapal::makepayment("emmnauel","30000","mnzava","epmnzava@gmail.com","MERCHANT","453f4f4343" ,"transacto","0679079774");
+
+
+       
+    echo  $res;
+
+    }```
+
+### Testing
+
+``` bash
+composer test
+```
+
+### Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+### Security
+
+If you discover any security related issues, please email epmnzava@gmail.com instead of using the issue tracker.
+
+## Credits
+- [Emmanuel Mnzava](https://github.com/dbrax)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
