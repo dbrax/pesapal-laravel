@@ -7,9 +7,17 @@
 
 
 This is a laravel package for intergrating with - [pesapal service] (https://developer.pesapal.com/)
+More information of this can be found [here](https://epmnzava.medium.com/)
+
 ## Installation
-- Laravel Version: ˆ7.*
-- PHP Version: ˆ7.2
+
+## Version Matrix
+
+Version | Laravel   | PHP Version
+------- | --------- | ------------
+1.0.0   | 8.0       | >= 8.0 
+1.0.1   | 8.0       | >= 7.3 >= 8.0
+1.0.2   | 8.0       | >= 7.2.5 >= 8.0
 
 You can install the package via composer:
 

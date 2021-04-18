@@ -3,7 +3,10 @@
     "description": "This is a laravel package for intergration with pesapal",
     "keywords": [
         "epmnzava",
-        "pesapal"
+        "pesapal",
+        "mobilemoney",
+        "tanzania",
+        "kenya"
     ],
     "homepage": "https://github.com/epmnzava/pesapal",
     "license": "MIT",
@@ -16,7 +19,7 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.1|^8.0",
         "illuminate/support":  "^8.14",
         "guzzlehttp/oauth-subscriber":"^0.4.0"
     },

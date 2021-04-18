@@ -1,20 +1,18 @@
 <?php
 
-/*
- * You can place your custom package configuration in here.
- */
+
 return [
 
-    "key"=>env("PESAPAL_CONSUMER_KEY"),
+    "key" => env("PESAPAL_CONSUMER_KEY"),
 
-    "secret"=>env("PESAPAL_CONSUMER_SECRET"), 
+    "secret" => env("PESAPAL_CONSUMER_SECRET"),
 
-    "api_url"=>env("PESAPAL_API_URL"),
+    "api_url" => env("PESAPAL_API_URL"),
 
 
-    "callback"=>env("PESAPAL_CALLBACK_URL"),
+    "callback" => env("PESAPAL_CALLBACK_URL"),
 
-    "currency_code"=>env("CURRENCY_CODE")
+    "currency_code" => env("CURRENCY_CODE")
 
 
 ];
